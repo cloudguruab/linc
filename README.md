@@ -7,7 +7,7 @@ Wyre is a wallet service that comes with address configuration, tracking and tok
 
 ## 🕹️ Setting up test environment
 Using pytest on our backend we will start by installing.
-```python
+```bash
 # installing deps
 pip install requirements.txt
 
@@ -16,11 +16,22 @@ python3 -m venv env
 source python3 env/bin/activate
 ```
 
+Executing test suite
+```bash
+pytest tests/
+```
 
 ## 🏄‍♂️ Running locally
+
+Starting your server environment from django
+
+```bash
+python3 manage.py runserver
+```
 
 ## 🦿 Running migrations
 
 ## 🪓 Usage
+Wyre supports multi provider connections regardless of hardware availability. The sole purpose is to allow service level support to blockchain platforms like Etherium. 
 
 ## 📖 Docs
