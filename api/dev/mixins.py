@@ -7,5 +7,14 @@ class Controller:
     def connection(self):
         pass
     
+
+
+class WalletController:
+    def __init__(self,):
+        pass
+    
+    def account(self):
+        pass
+    
     def balance(self):
         pass
