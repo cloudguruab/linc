@@ -8,13 +8,17 @@ class HttpProvider(Controller):
     and integrations for remote node providers. 
     """
     def __init__(self, provider):
-        self.provider: GlobalProviderType.addy = provider
+        self.provider: GlobalProviderType.provider = provider
+        super().__init__(url)
         
     def __str__(self):
         return f'<Http Provider> {self.provider}'
     
     def __repr__(self):
         return f'<Http Provider> {self.provider}'
+    
+    def connect(self):
+        w3 = Web3(self.provider)
     
     
 class IpcProvider(Controller):

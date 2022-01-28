@@ -1,12 +1,12 @@
 from web3 import Web3
+from .providerTypes import GlobalProviderType
 
 class Controller:
-    def __init__(self,):
-        pass
+    def __init__(self, url):
+        self.url: GlobalProviderType.addy = url
     
     def connection(self):
-        pass
-    
+        return self
 
 
 class WalletController:
