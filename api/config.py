@@ -1,4 +1,7 @@
 import os 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config:
     """
@@ -6,6 +9,10 @@ class Config:
     deployment, test and development.
     """
     
-    ACCOUNT=os.environ.get('ACCOUNT')
+    ACCOUNT=os.getenv('ACCOUNT')
     
-    SECRET = os.environ.get('SECRET')
+    SECRET=os.getenv('SECRET')
+
+    URL_HTTP=os.getenv('URL_HTTP')
+
+    URL_WSS=None 
