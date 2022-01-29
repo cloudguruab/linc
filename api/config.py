@@ -9,10 +9,9 @@ class Config:
     deployment, test and development.
     """
     
-    ACCOUNT=os.getenv('ACCOUNT')
-    
-    SECRET=os.getenv('SECRET')
-
     URL_HTTP=os.getenv('URL_HTTP')
 
-    URL_WSS=None 
+    INFURA_HTTP=os.getenv('INFURA_HTTP')
+    
+    INFURA_WSS=os.getenv('INFURA_WSS')
+    
