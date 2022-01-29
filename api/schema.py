@@ -1,6 +1,5 @@
 from graphene import Schema
 
-
 class Query(graphene.ObjectType):
     pass
 

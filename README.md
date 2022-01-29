@@ -10,15 +10,6 @@ This project uses two primary functions for connecting to either a local or host
 Configuration for hosted environments will require setting up your project inside popular platforms like infura.io or others. The purpose of this API is to allow the developer to build on either a local or hosted node, and connect to establish wallet address, track and monitor token transfers as well as checking balances for each address. 
 
 
-## 🪓 Local vs Hosted Nodes
-
-A local node requires less trust than a hosted one. A malicious hosted node can give you incorrect information, log your sent transactions with your IP address, or simply go offline. Incorrect information can cause all kinds of problems, including loss of assets.
-
-On the other hand, with a local node your machine is individually verifying all the transactions on the network, and providing you with the latest state. Unfortunately, this means using up a significant amount of disk space, and sometimes notable bandwidth and computation. Additionally, there is a big up-front time cost for downloading the full blockchain history.
-
-If you want to have your node manage keys for you (a popular option), you must use a local node. Note that even if you run a node on your own machine, you are still trusting the node software with any accounts you create on the node.
-
-
 ## 🕹️ Setting up your environment
 Start by installing the project dependencies
 ```bash
@@ -44,13 +35,11 @@ URL_HTTP
 
 ## ✂️ Running a local node
 For our local client we have chosen Ganache due to its CLI or UI availability.
-
-- [information on setting up a local node](https://trufflesuite.com/docs/ganache/quickstart.html)
+[information on setting up a local node](https://trufflesuite.com/docs/ganache/quickstart.html)
 
 ## 🥶 Running a hosted node
 Linc uses infura for hosted nodes.
-
-- [Information on running a hosted node](https://infura.io/)
+[Information on running a hosted node](https://infura.io/)
 
 ## 🏄‍♂️ Starting your server
 
@@ -67,6 +56,16 @@ Django version 4.0.1, using settings 'api.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
+
+
+## 🪓 Local vs Hosted Nodes
+
+A local node requires less trust than a hosted one. A malicious hosted node can give you incorrect information, log your sent transactions with your IP address, or simply go offline. Incorrect information can cause all kinds of problems, including loss of assets.
+
+On the other hand, with a local node your machine is individually verifying all the transactions on the network, and providing you with the latest state. Unfortunately, this means using up a significant amount of disk space, and sometimes notable bandwidth and computation. Additionally, there is a big up-front time cost for downloading the full blockchain history.
+
+If you want to have your node manage keys for you (a popular option), you must use a local node. Note that even if you run a node on your own machine, you are still trusting the node software with any accounts you create on the node.
+
 
 ## 📖 Docs
 - [Infura docs](https://infura.io/docs/ethereum#section/Make-Requests/JSON-RPC-Methods)
