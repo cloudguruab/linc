@@ -1,5 +1,5 @@
 from enum import Enum
-
+from web3 import Web3
 class GlobalProviderType(Enum):
     """
     configuration type for provider connections to web3 wallet.
@@ -8,7 +8,8 @@ class GlobalProviderType(Enum):
     provider: IPC, HTTP, or WebSocket based provider options
     """
     addy: str
-    provider: str
+    http: str
+    socket: str
     
 class BlockchainActivityType(Enum):
     """
