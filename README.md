@@ -68,6 +68,20 @@ INFURA_PROJECT_SECRET
 URL_HTTP
 ```
 
+## ☂️ Migrating && Creating a admin
+Creating admin role
+
+```bash
+python3 manage.py createsuperuser
+```
+
+Migrating your changes
+```bash 
+python3 manage.py makemigrations
+&&
+python3 manage.py migrate
+```
+
 ## ✂️ Running a local node
 For our local client we have chosen Ganache due to its CLI or UI availability.
 [information on setting up a local node](https://trufflesuite.com/docs/ganache/quickstart.html)
