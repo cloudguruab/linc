@@ -36,7 +36,7 @@ query {
 
 Response 
 
-```
+```graphql
 {
   "data": {
     "getBalance": "Your current account balance is: 0"
