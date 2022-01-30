@@ -10,6 +10,41 @@ This project uses two primary functions for connecting to either a local or host
 Configuration for hosted environments will require setting up your project inside popular platforms like infura.io or others. The purpose of this API is to allow the developer to build on either a local or hosted node, and connect to establish wallet address, track and monitor token transfers as well as checking balances for each address. 
 
 
+## 🏄‍♂️ Starting your server
+
+Starting your server environment from django
+
+```bash
+python3 manage.py runserver
+```
+
+Success message 
+
+```bash
+Django version 4.0.1, using settings 'api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+
+Once running, navigate to http://127.0.0.1:8000/graphql
+
+```graphql
+query {
+  getBalance(at: "wallet address here")
+}
+```
+
+Response 
+
+```
+{
+  "data": {
+    "getBalance": "Your current account balance is: 0"
+  }
+}
+```
+
+
 ## 🕹️ Setting up your environment
 Start by installing the project dependencies
 ```bash
@@ -40,22 +75,6 @@ For our local client we have chosen Ganache due to its CLI or UI availability.
 ## 🥶 Running a hosted node
 Linc uses infura for hosted nodes.
 [Information on running a hosted node](https://infura.io/)
-
-## 🏄‍♂️ Starting your server
-
-Starting your server environment from django
-
-```bash
-python3 manage.py runserver
-```
-
-Once running, navigate to http://127.0.0.1:8000/graphql
-
-```bash
-Django version 4.0.1, using settings 'api.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-```
 
 
 ## 🪓 Local vs Hosted Nodes
