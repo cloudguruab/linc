@@ -11,7 +11,10 @@ class Config:
     
     URL_HTTP=os.getenv('URL_HTTP')
 
-    INFURA_HTTP=os.getenv('INFURA_HTTP')
+    INFURA_HTTP=os.getenv('WEB3_INFURA_HTTP')
     
-    INFURA_WSS=os.getenv('INFURA_WSS')
+    INFURA_WSS=os.getenv('WEB3_INFURA_WSS')
     
+    DEMO_ACCT=os.getenv('DEMO_ACCT')
+    
+    SECRET=os.getenv('SECRET')
