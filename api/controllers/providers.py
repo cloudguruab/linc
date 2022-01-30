@@ -1,5 +1,5 @@
 from web3 import Web3
-from ..dev.providerTypes import GlobalProviderType
+from ..dev.types import GlobalProviderType
 from ..dev.exceptions import HttpProviderError, SocketProviderError
 from ..config import Config
 
@@ -17,7 +17,7 @@ class LocalProvider:
         except:            
             raise HttpProviderError
         
-        return w3.isConnected()
+        return w3
 
 class HostedProvider:
     """
@@ -28,20 +28,13 @@ class HostedProvider:
         self.url_http: GlobalProviderType.addy = Config.INFURA_HTTP
         self.url_wss: GlobalProviderType.addy = Config.INFURA_WSS
         
-    def __call__(self, *args):
-        if self.args:
-            
-            return 'Changing connection method'
-        
-        return self.connect_http()
-        
     def connect_http(self):
         try:
             w3 = Web3(Web3.HTTPProvider(self.url_http))
         except:
             raise HttpProviderError
         
-        return w3.isConnected()
+        return w3
     
     def connect_socket(self):
         try:
@@ -49,4 +42,4 @@ class HostedProvider:
         except: 
             raise SocketProviderError
         
-        return w3.isConnected()
+        return w3
