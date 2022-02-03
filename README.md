@@ -10,6 +10,27 @@ This project uses two primary functions for connecting to either a local or host
 Configuration for hosted environments will require setting up your project inside popular platforms like infura.io or others. The purpose of this API is to allow the developer to build on either a local or hosted node, and connect to establish wallet address, track and monitor token transfers as well as checking balances for each address. 
 
 
+## ⛽ API Schema
+
+Creating a wallet, you can import it into MetaMask!
+
+```graphql 
+mutation {
+  createWallet(add: true) {
+  	data
+  }
+}
+```
+
+Checking your balance
+
+```graphql
+query {
+  getBalance(at: "wallet address here")
+}
+```
+
+
 ## 🏄‍♂️ Starting your server
 
 Starting your server environment from django
@@ -26,22 +47,16 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-Once running, navigate to http://127.0.0.1:8000/graphql
+Once running, navigate to 
 
-```graphql
-query {
-  getBalance(at: "wallet address here")
-}
+```zsh
+http://127.0.0.1:8000/graphql
 ```
 
-Response 
+If you set up a super user you can also visit 
 
-```graphql
-{
-  "data": {
-    "getBalance": "Your current account balance is: 0"
-  }
-}
+```zsh 
+http://127.0.0.1:8000/admin
 ```
 
 
@@ -68,14 +83,18 @@ INFURA_PROJECT_SECRET
 URL_HTTP
 ```
 
-## ☂️ Migrating && Creating a admin
+## ☂️ Creating a admin
 Creating admin role
 
 ```bash
 python3 manage.py createsuperuser
 ```
 
-Migrating your changes
+
+## 👤 Handling migrations
+
+Migrating your changes initially or with database support 
+
 ```bash 
 python3 manage.py makemigrations
 &&
