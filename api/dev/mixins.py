@@ -17,7 +17,7 @@ class NodeMixin:
     def create_acct(self, *args):
         accounts_pool = self.lst_accounts()
         
-        if not accounts_pool or args.ADD:
+        if not accounts_pool or args.add == True:
             acct = self.w3.eth.account.create()
             self.w3.eth.accounts.append(acct.address)
             return {'address': acct.address, 'key': acct.privateKey.hex()}
