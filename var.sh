@@ -1,1 +1,2 @@
 export WEB3_INFURA_PROJECT_ID=f47ee96b712543ff9f6c197f13e9fbe2
+echo "Environment variables injected"
